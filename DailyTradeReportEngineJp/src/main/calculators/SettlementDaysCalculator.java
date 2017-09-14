@@ -8,7 +8,7 @@ import main.bean.days.WorkDaysArabic;
 import main.bean.days.WorkDaysDefult;
 
 public class SettlementDaysCalculator {
-
+//returns workdays according to currency of deal
 	public static LocalDate calcDays(Deal dealItem) {
 		
 			IWorkDays workday;
