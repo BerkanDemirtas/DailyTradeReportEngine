@@ -3,7 +3,7 @@ package main.bean.days;
 import java.time.DayOfWeek;
 
 public class WorkDaysArabic extends WorkDays {
-
+	//arabic working days
 	public static WorkDaysArabic getInstance() {
 		return new WorkDaysArabic();
 
@@ -12,7 +12,7 @@ public class WorkDaysArabic extends WorkDays {
 	private WorkDaysArabic() {
 		super();
 	}
-
+	//set status of days for arabic working days
 	@Override
 	protected void organizeDays() {
 		// TODO Auto-generated method stub
