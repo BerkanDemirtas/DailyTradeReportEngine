@@ -27,7 +27,8 @@ public class Deal {
 	private BigDecimal tradeAmount;
 
 	private TradeAct tradeAction;
-
+// constructor of deal class
+// it finds settlement date and trade amount itself
 	public Deal(String entity, LocalDate instructionDate, LocalDate settlementDate, Currency currCode,
 			BigDecimal aggreedFx, int units, BigDecimal pricePerUnit, TradeAct tradeAction) {
 
@@ -50,7 +51,7 @@ public class Deal {
 		this.settlementDate = settlementDate;
 		this.settlementDate = SettlementDaysCalculator.calcDays(this);
 	}
-
+//calculates and returns trade amount 
 	private BigDecimal calcAmount() {
 		// TODO Auto-generated method stub
 		return pricePerUnit.multiply(aggreedFx).multiply(new BigDecimal(units)).setScale(2, BigDecimal.ROUND_HALF_UP);
