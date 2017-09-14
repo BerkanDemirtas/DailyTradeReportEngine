@@ -1,7 +1,7 @@
 package main.bean;
 
 
-
+//trade action enum class 
 public enum TradeAct{
 		Buy("B"),
 	    Sell("S");
