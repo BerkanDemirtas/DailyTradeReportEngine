@@ -12,7 +12,7 @@ public class WorkDaysDefult extends WorkDays {
 	private WorkDaysDefult() {
 		super();
 	}
-
+	//set status of days for default working days
 	@Override
 	protected void organizeDays() {
 		// TODO Auto-generated method stub
