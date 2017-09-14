@@ -13,11 +13,13 @@ import main.bean.Deal;
 import main.bean.TradeAct;
 
 public class AmountRankCalculator {
-
+// returns total trade amount of outgoing deals day by  day 
 	public static Map<LocalDate, BigDecimal> dailyOutGoingAmnt(Set<Deal> deals) {
 
 		Map<LocalDate, BigDecimal> outgoingAmnt = new HashMap<>();
-
+// puts every outgoing deals in a map
+//if key (date) does not exsit put day, amount into map
+//if key (date) exsists update value 
 		for (Deal dealItem : deals) {
 
 			if (dealItem.getTradeAction().equals(TradeAct.Buy))
@@ -32,7 +34,9 @@ public class AmountRankCalculator {
 		return outgoingAmnt;
 
 	}
-
+// puts every incoming deals in a map
+//if key (date) does not exsit put day, amount into map
+//if key (date) exsists update value 
 	public static Map<LocalDate, BigDecimal> dailyInComingAmnt(Set<Deal> deals) {
 
 		Map<LocalDate, BigDecimal> inComingAmnt = new HashMap<>();
@@ -51,7 +55,8 @@ public class AmountRankCalculator {
 		return inComingAmnt;
 
 	}
-
+// puts in an order deals according to trade amount of deals
+// returns ordered arraylist of deals for dates
 	public static Map<LocalDate, ArrayList<Deal>> rankingOutGoingDeals(Set<Deal> deals) {
 
 		Map<LocalDate, ArrayList<Deal>> outgoingRank = new HashMap<>();
@@ -91,7 +96,8 @@ public class AmountRankCalculator {
 		return outgoingRank;
 	}
 
-	
+// puts in an order deals according to trade amount of deals
+// returns ordered arraylist of deals for dates	
 	public static Map<LocalDate, ArrayList<Deal>> rankingIncomingDeals(Set<Deal> deals) {
 
 		Map<LocalDate, ArrayList<Deal>> incomingRank = new HashMap<>();
