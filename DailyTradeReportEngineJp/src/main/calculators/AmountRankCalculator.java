@@ -18,8 +18,8 @@ public class AmountRankCalculator {
 
 		Map<LocalDate, BigDecimal> outgoingAmnt = new HashMap<>();
 // puts every outgoing deals in a map
-//if key (date) does not exsit put day, amount into map
-//if key (date) exsists update value 
+//if key (date) does not exist put day, amount into map
+//if key (date) exists update value 
 		for (Deal dealItem : deals) {
 
 			if (dealItem.getTradeAction().equals(TradeAct.Buy))
@@ -35,8 +35,8 @@ public class AmountRankCalculator {
 
 	}
 // puts every incoming deals in a map
-//if key (date) does not exsit put day, amount into map
-//if key (date) exsists update value 
+//if key (date) does not exist put day, amount into map
+//if key (date) exists update value 
 	public static Map<LocalDate, BigDecimal> dailyInComingAmnt(Set<Deal> deals) {
 
 		Map<LocalDate, BigDecimal> inComingAmnt = new HashMap<>();
