@@ -22,7 +22,8 @@ public abstract class WorkDays implements IWorkDays{
 	
 		organizeDays();
 	}
-	
+	//finds working days according to given date
+	// if given date is off-day calls recursively itself with next day value
 	@Override
 	public LocalDate findWorkingDays(LocalDate date) {
 		// TODO Auto-generated method stub
