@@ -2,6 +2,7 @@ package main.bean;
 
 
 //trade action enum class 
+//values only can be Buy or Sell
 public enum TradeAct{
 		Buy("B"),
 	    Sell("S");
