@@ -12,7 +12,7 @@ import main.calculators.AmountRankCalculator;
 public class ReportGenarator {
 
 	
-	
+//writes reports to console	
 	public String generateReports(Set<Deal> deals) {
 		
 		StringBuilder str = new StringBuilder();
@@ -31,7 +31,7 @@ public class ReportGenarator {
 	}
 	
 	
-	
+// returns outgoing amounts for every days 	
 	private static StringBuilder generateDailyOutgoingAmount(Set<Deal> deals, StringBuilder stringBuilder) {
         final Map<LocalDate, BigDecimal> dailyOutgoingAmount =
                 AmountRankCalculator.dailyOutGoingAmnt(deals);
@@ -49,7 +49,7 @@ public class ReportGenarator {
 
         return stringBuilder;
     }
-
+// returns incoming amounts for every days 	
     private static StringBuilder generateDailyIncomingAmount(Set<Deal> deals, StringBuilder stringBuilder) {
         final Map<LocalDate, BigDecimal> dailyOutgoingAmount =
                 AmountRankCalculator.dailyInComingAmnt(deals);
@@ -67,7 +67,7 @@ public class ReportGenarator {
 
         return stringBuilder;
     }
-
+// returns rank list of outgoing deals for every day
     private static StringBuilder generateDailyOutgoingRanking(Set<Deal> deals, StringBuilder stringBuilder) {
         final Map<LocalDate, ArrayList<Deal>> dailyOutgoingRanking =
                 AmountRankCalculator.rankingOutGoingDeals(deals);
@@ -92,7 +92,7 @@ public class ReportGenarator {
 
         return stringBuilder;
     }
-
+// returns rank list of incoming deals for every day
     private static StringBuilder generateDailyIncomingRanking(Set<Deal> deals, StringBuilder stringBuilder) {
         final Map<LocalDate, ArrayList<Deal>> dailyIncomingRanking =
                 AmountRankCalculator.rankingIncomingDeals(deals);
